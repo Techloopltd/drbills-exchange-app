@@ -42,7 +42,12 @@ class SetTransactPinPage extends StatelessWidget {
               SizedBox(height: drGap(4, context)),
               PinBox(onChanged: (e) {}),
               Spacer(),
-              LongButton(text: "Next", onTap: () {}),
+              LongButton(
+                text: "Next",
+                onTap: () {
+                  context.router.pushPath("/complete-transact-pin");
+                },
+              ),
               SizedBox(height: drGap(1, context)),
             ],
           ),
@@ -73,7 +78,7 @@ class CompleteTransactPinPage extends StatelessWidget {
               Image.asset("icon".png, height: 60, width: 60),
               SizedBox(height: drGap(1, context)),
               Text(
-                "Set Transaction Pin",
+                "Confirm Transaction Pin",
                 style: AppTextStyles.heading1.copyWith(fontSize: 20),
               ),
               Center(

@@ -1,6 +1,8 @@
 import 'package:drbills_exchange/config/constants/app_colors.dart';
 import 'package:drbills_exchange/config/constants/text_styles.dart';
+import 'package:drbills_exchange/config/extensions/string_extensions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class SectionTitle extends StatelessWidget {
   final String title;
@@ -13,15 +15,13 @@ class SectionTitle extends StatelessWidget {
 }
 
 class CryptoListTile extends StatelessWidget {
-  final IconData icon;
-  final Color iconColor;
+  final String icon;
   final String name;
   final String fiatValue;
 
   const CryptoListTile({
     super.key,
     required this.icon,
-    required this.iconColor,
     required this.name,
     required this.fiatValue,
   });
@@ -37,11 +37,7 @@ class CryptoListTile extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(color: iconColor, shape: BoxShape.circle),
-            child: Icon(icon, color: Colors.white, size: 20),
-          ),
+          SvgPicture.asset(icon.svg, height: 32, width: 32),
           const SizedBox(width: 15),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,

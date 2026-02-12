@@ -35,26 +35,14 @@ class HomeViewPage extends StatelessWidget {
             const SectionTitle(title: "Crypto assets"),
             const SizedBox(height: 10),
             CryptoListTile(
-              icon: Icons.currency_bitcoin,
-              iconColor: Colors.orange,
+              icon: "btc",
               name: "0.023455 BTC",
               fiatValue: "₦700,000",
             ),
+            CryptoListTile(icon: "trx", name: "0.00 TRX", fiatValue: "₦0.00"),
+            CryptoListTile(icon: "sol", name: "0.00 SOL", fiatValue: "₦0.00"),
             CryptoListTile(
-              icon: Icons.diamond_outlined, // Placeholder for TRX
-              iconColor: Colors.red,
-              name: "0.00 TRX",
-              fiatValue: "₦0.00",
-            ),
-            CryptoListTile(
-              icon: Icons.layers, // Placeholder for SOL
-              iconColor: Colors.black,
-              name: "0.00 SOL",
-              fiatValue: "₦0.00",
-            ),
-            CryptoListTile(
-              icon: Icons.attach_money, // Placeholder for USDT
-              iconColor: Colors.teal,
+              icon: "tether",
               name: "0.00 USDT",
               fiatValue: "₦0.00",
             ),
